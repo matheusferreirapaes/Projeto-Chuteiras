@@ -3,23 +3,26 @@ import { chuteiras } from "./data.js"
 const divResultados = document.getElementById("resultados")
 const inputChuteiras = document.getElementById("input-chuteiras")
 const buttonChuteiras = document.getElementById("btn-chuteiras")
-for (const chuteira of chuteiras) {
-    divResultados.innerHTML += `
-    <div class="col-12 col-md-4 p-2">
-        <div class="conteudo border border-danger d-flex justify-content-center text-center">
-            <div>
-                <img class="imagem" src="${chuteira.url}">
-                <p>N° ${chuteira.numero}</p>
-                <h5> ${chuteira.nome}</h5>
-                <p> ${chuteira.tipo} </p>
+
+function createElement() {
+    for (const chuteira of chuteiras) {
+        divResultados.innerHTML += `
+        <div class="col-12 col-md-4 p-2">
+            <div class="conteudo border border-danger d-flex justify-content-center text-center">
+                <div>
+                    <img class="imagem" src="${chuteira.url}">
+                    <p>N° ${chuteira.numero}</p>
+                    <h5> ${chuteira.nome}</h5>
+                    <p> ${chuteira.tipo} </p>
+                </div>
             </div>
         </div>
-    </div>
-
-`
+    
+    `
+    }
 }
 
-buttonChuteiras.addEventListener("click", function procurarChuteiras() {
+function findElement() {
     const chute = chuteiras.find(e => e.nome === inputChuteiras.value)
     console.log(chute)
     if (!chute) {
@@ -58,5 +61,11 @@ buttonChuteiras.addEventListener("click", function procurarChuteiras() {
             </div>
         </div>
 
-    `
-})
+    ` 
+}
+
+
+buttonChuteiras.addEventListener("click", findElement)
+
+
+window.addEventListener("load", createElement)
