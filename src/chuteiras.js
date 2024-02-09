@@ -47,7 +47,13 @@ buttonChuteiras.addEventListener("click", function procurarChuteiras() {
                     <button class="btn1 btn btn-danger">Adicionar a Sacola</button>
                 </div>
                 <div class="col-8 text=center p-2">
+                    <p><strong>${chute.titulo}</strong></p>
                    <p>${chute.informacao}</p>
+                   <div class="d-flex justify-content">
+                        <p><strong>${chute.avaliação}</strong></p>
+                        <p>(${chute.vendidos})</p>
+                   </div>
+                   <h4>R$${chute.preço}</h4>
                 </div>
             </div>
         </div>
