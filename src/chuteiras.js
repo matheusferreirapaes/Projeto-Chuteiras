@@ -14,6 +14,10 @@ function createElement() {
                     <p>N° ${chuteira.numero}</p>
                     <h5> ${chuteira.nome}</h5>
                     <p> ${chuteira.tipo} </p>
+                    <div class="button3">
+                        <button class="btn1 btn btn-success"">Comprar a minha</button>
+                        <button class="btn1 btn btn-danger">Adicionar a Sacola</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -46,7 +50,7 @@ function findElement() {
                         <h5> ${chute.nome}</h5>
                         <p> ${chute.tipo}</p>
                     </div>
-                    <button class="btn1 btn btn-success"">Adquirir a Minha</button>
+                    <button class="btn1 btn btn-success"">Finalizar Compra</button>
                     <button class="btn1 btn btn-danger">Adicionar a Sacola</button>
                 </div>
                 <div class="col-8 text=center p-2">
@@ -57,6 +61,29 @@ function findElement() {
                         <p>(${chute.vendidos})</p>
                    </div>
                    <h4>R$${chute.preço}</h4>
+                   <p>ou 12x de R$${chute.parcelado}</p>
+                   <a class="" href="chuteiras.html">Consultar meios de pagamentos</a>
+                   <div class="envios">
+                   <p><strong>Envios para todo País</strong></p>
+                   <a class="" href="chuteiras.html">Consultar meios de Envios</a>
+                   </div>
+                   <div class="numero d-flex justify-content">
+                        <div class="border border-danger text-center p-2">
+                            <p>${chute.numero1}</p>
+                        </div>
+                        <div class="border border-danger text-center p-2">
+                            <p>${chute.numero2}</p>
+                        </div>
+                        <div class="border border-danger text-center p-2">
+                            <p>${chute.numero3}</p>
+                        </div>
+                        <div class="border border-danger text-center p-2">
+                            <p>${chute.numero4}</p>
+                        </div>
+                        <div class="border border-danger text-center p-2">
+                            <p>${chute.numero5}</p>
+                        </div>
+                   </div>
                 </div>
             </div>
         </div>
