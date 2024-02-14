@@ -68,20 +68,12 @@ function findElement() {
                    <a class="" href="chuteiras.html">Consultar meios de Envios</a>
                    </div>
                    <div class="numero d-flex justify-content">
-                        <div class="border border-danger text-center p-2">
-                            <p>${chute.numero1}</p>
-                        </div>
-                        <div class="border border-danger text-center p-2">
-                            <p>${chute.numero2}</p>
-                        </div>
-                        <div class="border border-danger text-center p-2">
-                            <p>${chute.numero3}</p>
-                        </div>
-                        <div class="border border-danger text-center p-2">
-                            <p>${chute.numero4}</p>
-                        </div>
-                        <div class="border border-danger text-center p-2">
-                            <p>${chute.numero5}</p>
+                        <div class=" text-center p-2">
+                            <select>
+                            ${chute.numeros.map((e,i) => `
+                            <option value="${i}">${e}</option>
+                            `)}
+                            </select>
                         </div>
                    </div>
                 </div>
